@@ -1,0 +1,501 @@
+/* ========== 基础重置 ========== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PingFang SC', 'Microsoft YaHei', 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #fff;
+}
+
+/* ========== 主页 ========== */
+.main-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 20px;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.main-page.hidden {
+    opacity: 0;
+    transform: scale(0.9);
+    pointer-events: none;
+    position: absolute;
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+.main-title {
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(135deg, #ff6b9d, #c44dff, #6bbaff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.main-subtitle {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 2px;
+}
+
+/* ========== 爱心容器 ========== */
+.heart-container {
+    position: relative;
+    width: 500px;
+    height: 480px;
+    margin: 0 auto;
+    flex-shrink: 0;
+}
+
+/* ========== 标签卡片 ========== */
+.tag-card {
+    position: absolute;
+    padding: 10px 16px;
+    border-radius: 12px;
+    font-size: 13px;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px);
+    max-width: 160px;
+    text-align: center;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    z-index: 1;
+    user-select: none;
+}
+
+.tag-card:hover {
+    transform: scale(1.15) rotate(0deg) !important;
+    z-index: 10;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tag-card:active {
+    transform: scale(1.05) !important;
+}
+
+.tag-card .tag-song {
+    display: block;
+    font-size: 10px;
+    opacity: 0.7;
+    margin-top: 4px;
+}
+
+/* 标签颜色主题 */
+.tag-pink { background: linear-gradient(135deg, rgba(255, 107, 157, 0.85), rgba(255, 154, 182, 0.85)); color: #fff; }
+.tag-purple { background: linear-gradient(135deg, rgba(196, 77, 255, 0.85), rgba(167, 119, 255, 0.85)); color: #fff; }
+.tag-blue { background: linear-gradient(135deg, rgba(107, 186, 255, 0.85), rgba(130, 204, 255, 0.85)); color: #fff; }
+.tag-green { background: linear-gradient(135deg, rgba(107, 255, 157, 0.85), rgba(130, 255, 180, 0.85)); color: #1a1a2e; }
+.tag-orange { background: linear-gradient(135deg, rgba(255, 165, 107, 0.85), rgba(255, 190, 130, 0.85)); color: #fff; }
+.tag-yellow { background: linear-gradient(135deg, rgba(255, 230, 107, 0.85), rgba(255, 240, 150, 0.85)); color: #1a1a2e; }
+.tag-red { background: linear-gradient(135deg, rgba(255, 87, 87, 0.85), rgba(255, 120, 120, 0.85)); color: #fff; }
+.tag-cyan { background: linear-gradient(135deg, rgba(107, 255, 230, 0.85), rgba(130, 255, 240, 0.85)); color: #1a1a2e; }
+.tag-indigo { background: linear-gradient(135deg, rgba(130, 107, 255, 0.85), rgba(160, 140, 255, 0.85)); color: #fff; }
+.tag-rose { background: linear-gradient(135deg, rgba(255, 130, 170, 0.85), rgba(255, 160, 190, 0.85)); color: #fff; }
+.tag-teal { background: linear-gradient(135deg, rgba(80, 200, 180, 0.85), rgba(110, 220, 200, 0.85)); color: #fff; }
+.tag-gold { background: linear-gradient(135deg, rgba(255, 200, 80, 0.85), rgba(255, 215, 120, 0.85)); color: #1a1a2e; }
+
+/* ========== 主页底部 ========== */
+.main-footer {
+    margin-top: 20px;
+    text-align: center;
+    z-index: 2;
+}
+
+.main-footer p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.4);
+    letter-spacing: 1px;
+}
+
+/* ========== 详情页 ========== */
+.detail-page {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.6s ease;
+    overflow: hidden;
+}
+
+.detail-page.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* ========== 粒子背景 ========== */
+.particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    animation: particleFloat linear infinite;
+    opacity: 0;
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(100vh) translateX(0) rotate(0deg) scale(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+        transform: translateY(80vh) translateX(10px) rotate(36deg) scale(1);
+    }
+    50% {
+        opacity: 0.6;
+        transform: translateY(40vh) translateX(-15px) rotate(180deg) scale(0.9);
+    }
+    90% {
+        opacity: 0.2;
+    }
+    100% {
+        transform: translateY(-10vh) translateX(20px) rotate(360deg) scale(0.5);
+        opacity: 0;
+    }
+}
+
+/* 粒子形状变体 */
+.particle.heart-shape {
+    border-radius: 0;
+    width: 12px !important;
+    height: 12px !important;
+    background: transparent !important;
+    position: absolute;
+}
+
+.particle.heart-shape::before,
+.particle.heart-shape::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 18px;
+    background: inherit;
+    border-radius: 12px 12px 0 0;
+}
+
+.particle.star-shape {
+    border-radius: 0;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+/* ========== 背景主题 ========== */
+.detail-page.theme-romantic {
+    background: linear-gradient(135deg, #2d1b3d 0%, #4a1942 30%, #801336 60%, #c72c41 100%);
+}
+
+.detail-page.theme-sad {
+    background: linear-gradient(135deg, #0c1445 0%, #1a237e 30%, #283593 60%, #3949ab 100%);
+}
+
+.detail-page.theme-happy {
+    background: linear-gradient(135deg, #ff6f00 0%, #ff8f00 30%, #ffa000 60%, #ffca28 100%);
+}
+
+.detail-page.theme-dreamy {
+    background: linear-gradient(135deg, #1b0a3c 0%, #2d1b69 30%, #5c2d91 60%, #9b59b6 100%);
+}
+
+.detail-page.theme-fresh {
+    background: linear-gradient(135deg, #0d4f4f 0%, #116466 30%, #1a8a8a 60%, #2bbbad 100%);
+}
+
+.detail-page.theme-warm {
+    background: linear-gradient(135deg, #3e1f0d 0%, #5d2e0c 30%, #8b4513 60%, #cd853f 100%);
+}
+
+.detail-page.theme-night {
+    background: linear-gradient(135deg, #0a0a2e 0%, #0d0d3b 30%, #141452 60%, #1a1a6e 100%);
+}
+
+.detail-page.theme-sweet {
+    background: linear-gradient(135deg, #4a0e2e 0%, #6b1d4a 30%, #8e2d64 60%, #c74b8a 100%);
+}
+
+/* ========== 返回按钮 ========== */
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 25px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.back-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateX(-3px);
+}
+
+.back-arrow {
+    font-size: 18px;
+}
+
+/* ========== 歌曲信息 ========== */
+.song-info {
+    text-align: center;
+    z-index: 5;
+    margin-bottom: 40px;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.song-cover {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    margin: 0 auto 16px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    animation: coverPulse 3s ease-in-out infinite;
+}
+
+@keyframes coverPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.2); }
+    50% { box-shadow: 0 0 0 15px rgba(255, 255, 255, 0); }
+}
+
+.song-name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.song-artist {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 1px;
+}
+
+/* ========== 歌词展示区 ========== */
+.lyrics-container {
+    z-index: 5;
+    text-align: center;
+    max-width: 600px;
+    width: 90%;
+    padding: 0 20px;
+}
+
+.lyric-line {
+    font-size: 22px;
+    line-height: 2;
+    margin-bottom: 10px;
+    opacity: 0.3;
+    transition: all 0.5s ease;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.lyric-line.active {
+    opacity: 1;
+    transform: scale(1.05);
+}
+
+.lyric-line.past {
+    opacity: 0.5;
+}
+
+/* 逐字高亮 */
+.lyric-char {
+    display: inline-block;
+    transition: all 0.3s ease;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.lyric-char.highlight {
+    color: #fff;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5), 0 0 40px rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* ========== 播放控制 ========== */
+.play-controls {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 80%;
+    max-width: 400px;
+}
+
+.play-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.play-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+.play-icon {
+    font-size: 16px;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.9));
+    border-radius: 2px;
+    transition: width 0.1s linear;
+}
+
+/* ========== 响应式 ========== */
+@media (max-width: 560px) {
+    .heart-container {
+        width: 340px;
+        height: 340px;
+    }
+
+    .tag-card {
+        padding: 6px 10px;
+        font-size: 11px;
+        max-width: 110px;
+    }
+
+    .main-title {
+        font-size: 24px;
+    }
+
+    .lyric-line {
+        font-size: 18px;
+    }
+
+    .song-name {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 380px) {
+    .heart-container {
+        width: 280px;
+        height: 280px;
+    }
+
+    .tag-card {
+        padding: 5px 8px;
+        font-size: 10px;
+        max-width: 90px;
+    }
+}
+
+/* ========== 背景装饰光斑 ========== */
+.main-page::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at 30% 40%, rgba(255, 107, 157, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(107, 186, 255, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 50% 80%, rgba(196, 77, 255, 0.06) 0%, transparent 50%);
+    animation: bgShift 20s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes bgShift {
+    0%, 100% { transform: translate(0, 0); }
+    33% { transform: translate(2%, -2%); }
+    66% { transform: translate(-2%, 1%); }
+}
+
+/* ========== 标签入场动画 ========== */
+.tag-card {
+    animation: tagAppear 0.6s ease-out backwards;
+}
+
+@keyframes tagAppear {
+    from {
+        opacity: 0;
+        transform: scale(0.3) rotate(10deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(var(--rotate, 0deg));
+    }
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 歌词爱心墙</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💜</text></svg>">
+</head>
+<body>
+    <!-- ====== 主页：爱心标签墙 ====== -->
+    <div class="main-page" id="mainPage">
+        <div class="main-header">
+            <h1 class="main-title">🎵 歌词爱心墙</h1>
+            <p class="main-subtitle">点击标签，感受歌词的浪漫</p>
+        </div>
+
+        <div class="heart-container" id="heartContainer">
+            <!-- 标签由 JS 动态生成 -->
+        </div>
+
+        <div class="main-footer">
+            <p>💕 每一句歌词，都是一段故事</p>
+        </div>
+    </div>
+
+    <!-- ====== 详情页：歌词动画展示 ====== -->
+    <div class="detail-page" id="detailPage">
+        <!-- 粒子背景容器 -->
+        <div class="particles-container" id="particlesContainer"></div>
+
+        <!-- 返回按钮 -->
+        <button class="back-btn" id="backBtn">
+            <span class="back-arrow">←</span>
+            <span>返回</span>
+        </button>
+
+        <!-- 歌曲信息 -->
+        <div class="song-info">
+            <div class="song-cover" id="songCover">🎵</div>
+            <h2 class="song-name" id="songName"></h2>
+            <p class="song-artist" id="songArtist"></p>
+        </div>
+
+        <!-- 歌词展示区 -->
+        <div class="lyrics-container" id="lyricsContainer">
+            <!-- 歌词行由 JS 动态生成 -->
+        </div>
+
+        <!-- 播放控制 -->
+        <div class="play-controls">
+            <button class="play-btn" id="playBtn">
+                <span class="play-icon" id="playIcon">▶</span>
+                <span id="playText">播放歌词动画</span>
+            </button>
+            <div class="progress-bar" id="progressBar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
