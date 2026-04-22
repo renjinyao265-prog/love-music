@@ -11,7 +11,8 @@ const songs = [
         fullLyrics: ["故事的小黄花", "从出生那年就飘着", "童年的荡秋千", "随记忆一直晃到现在"],
         theme: "romantic",
         emoji: "🌤️",
-        color: "tag-yellow"
+        color: "tag-yellow",
+        musicUrl: "https://music.163.com/#/search/m/?s=晴天 周杰伦"
     },
     {
         name: "起风了",
@@ -20,7 +21,8 @@ const songs = [
         fullLyrics: ["我曾将青春翻涌成她", "也曾指尖弹出盛夏", "心之所动 且就随缘去吧"],
         theme: "dreamy",
         emoji: "🍃",
-        color: "tag-green"
+        color: "tag-green",
+        musicUrl: "https://music.163.com/#/search/m/?s=起风了 买辣椒也用券"
     },
     {
         name: "孤勇者",
@@ -29,7 +31,8 @@ const songs = [
         fullLyrics: ["爱你孤身走暗巷", "爱你不跪的模样", "爱你对峙过绝望", "不肯哭一场"],
         theme: "night",
         emoji: "⚔️",
-        color: "tag-indigo"
+        color: "tag-indigo",
+        musicUrl: "https://music.163.com/#/search/m/?s=孤勇者 陈奕迅"
     },
     {
         name: "稻香",
@@ -38,7 +41,8 @@ const songs = [
         fullLyrics: ["还记得你说家是唯一的城堡", "随着稻香河流继续奔跑", "微微笑 小时候的梦我知道", "不要哭让萤火虫带着你逃跑"],
         theme: "warm",
         emoji: "🌾",
-        color: "tag-orange"
+        color: "tag-orange",
+        musicUrl: "https://music.163.com/#/search/m/?s=稻香 周杰伦"
     },
     {
         name: "漠河舞厅",
@@ -47,7 +51,8 @@ const songs = [
         fullLyrics: ["如果有时间", "你会来看一看我吧", "看大雪如何衰老的", "我的眼睛如何融掉"],
         theme: "sad",
         emoji: "❄️",
-        color: "tag-blue"
+        color: "tag-blue",
+        musicUrl: "https://music.163.com/#/search/m/?s=漠河舞厅 柳爽"
     },
     {
         name: "错位时空",
@@ -56,7 +61,8 @@ const songs = [
         fullLyrics: ["我吹过你吹过的晚风", "那我们算不算相拥", "如梦如幻如泡影", "终究是镜花水月一场空"],
         theme: "romantic",
         emoji: "🌙",
-        color: "tag-purple"
+        color: "tag-purple",
+        musicUrl: "https://music.163.com/#/search/m/?s=错位时空 艾辰"
     },
     {
         name: "踏山河",
@@ -65,7 +71,8 @@ const songs = [
         fullLyrics: ["而我枪出如龙 乾坤撼动", "一啸破苍穹", "长枪刺破云霞", "放下一生牵挂"],
         theme: "night",
         emoji: "🏔️",
-        color: "tag-red"
+        color: "tag-red",
+        musicUrl: "https://music.163.com/#/search/m/?s=踏山河 是七叔呢"
     },
     {
         name: "可能",
@@ -74,7 +81,8 @@ const songs = [
         fullLyrics: ["可能南方的阳光", "照着北方的风", "可能时光被秋风藏起", "留下冬天的梦"],
         theme: "dreamy",
         emoji: "✨",
-        color: "tag-cyan"
+        color: "tag-cyan",
+        musicUrl: "https://music.163.com/#/search/m/?s=可能 程响"
     },
     {
         name: "晚风心里吹",
@@ -83,7 +91,8 @@ const songs = [
         fullLyrics: ["晚风心里吹", "吹走愁与悲", "月色多温柔", "如你眼眸"],
         theme: "fresh",
         emoji: "🌅",
-        color: "tag-teal"
+        color: "tag-teal",
+        musicUrl: "https://music.163.com/#/search/m/?s=晚风心里吹 陈婧霏"
     },
     {
         name: "半生雪",
@@ -92,7 +101,8 @@ const songs = [
         fullLyrics: ["半生风雪", "吹不散花落时节的眼泪", "半生回忆", "抹不去岁月留下的伤悲"],
         theme: "sad",
         emoji: "🌸",
-        color: "tag-pink"
+        color: "tag-pink",
+        musicUrl: "https://music.163.com/#/search/m/?s=半生雪 是七叔呢"
     },
     {
         name: "下山",
@@ -101,7 +111,8 @@ const songs = [
         fullLyrics: ["要想练就绝世武功", "就要忍受常人难忍受的痛", "师傅喜欢喝的茶叫做乌龙", "衣服爱穿中国红"],
         theme: "happy",
         emoji: "⛰️",
-        color: "tag-gold"
+        color: "tag-gold",
+        musicUrl: "https://music.163.com/#/search/m/?s=下山 要不要买菜"
     },
     {
         name: "星辰大海",
@@ -110,7 +121,8 @@ const songs = [
         fullLyrics: ["我向你奔赴而来", "你就是星辰大海", "我眼中炽热的恒星", "长夜里照我前行"],
         theme: "night",
         emoji: "🌊",
-        color: "tag-blue"
+        color: "tag-blue",
+        musicUrl: "https://music.163.com/#/search/m/?s=星辰大海 黄霄雲"
     },
     {
         name: "告白气球",
@@ -119,7 +131,8 @@ const songs = [
         fullLyrics: ["亲爱的爱上你", "从那天起 甜蜜的很轻易", "亲爱的别任性", "你的眼睛在说我愿意"],
         theme: "sweet",
         emoji: "🎈",
-        color: "tag-rose"
+        color: "tag-rose",
+        musicUrl: "https://music.163.com/#/search/m/?s=告白气球 周杰伦"
     },
     {
         name: "光年之外",
@@ -128,7 +141,8 @@ const songs = [
         fullLyrics: ["缘分让我们相遇乱世以外", "命运却要我们危难中相爱", "也许未来遥远在光年之外", "我愿守候未知里为你等待"],
         theme: "dreamy",
         emoji: "🌌",
-        color: "tag-indigo"
+        color: "tag-indigo",
+        musicUrl: "https://music.163.com/#/search/m/?s=光年之外 邓紫棋"
     },
     {
         name: "少年",
@@ -137,7 +151,8 @@ const songs = [
         fullLyrics: ["我还是从前那个少年", "没有一丝丝改变", "时间只不过是考验", "种在心中信念丝毫未减"],
         theme: "happy",
         emoji: "🧑",
-        color: "tag-orange"
+        color: "tag-orange",
+        musicUrl: "https://music.163.com/#/search/m/?s=少年 梦然"
     },
     {
         name: "飞鸟和蝉",
@@ -146,7 +161,8 @@ const songs = [
         fullLyrics: ["你骄傲的飞远", "我栖息的夏天", "再见来不及握手", "来不及说一句再见"],
         theme: "sad",
         emoji: "🐦",
-        color: "tag-teal"
+        color: "tag-teal",
+        musicUrl: "https://music.163.com/#/search/m/?s=飞鸟和蝉 任然"
     },
     {
         name: "白月光与朱砂痣",
@@ -155,7 +171,8 @@ const songs = [
         fullLyrics: ["白月光在照耀", "你才想起她的好", "朱砂痣久难消", "你是否能知道"],
         theme: "romantic",
         emoji: "💎",
-        color: "tag-rose"
+        color: "tag-rose",
+        musicUrl: "https://music.163.com/#/search/m/?s=白月光与朱砂痣 大籽"
     },
     {
         name: "可可托海的牧羊人",
@@ -164,22 +181,23 @@ const songs = [
         fullLyrics: ["心上人 我在可可托海等你", "他们说 你嫁到了伊犁", "是不是因为那里有美丽的那拉提", "还是那里的杏花才能酿出你要的甜蜜"],
         theme: "warm",
         emoji: "🐑",
-        color: "tag-gold"
+        color: "tag-gold",
+        musicUrl: "https://music.163.com/#/search/m/?s=可可托海的牧羊人 王琪"
     }
 ];
 
-// ========== 爱心形状坐标点 ==========
-// 基于心形曲线方程生成，归一化到 0~1 范围
-function generateHeartPoints(count) {
+// ========== 心形曲线路径生成 ==========
+// 沿心形参数方程生成一系列点，卡片沿这些点堆叠
+function generateHeartPath(totalCards) {
     const points = [];
-    for (let i = 0; i < count; i++) {
-        const t = (i / count) * Math.PI * 2;
-        // 心形参数方程
+    // 心形参数方程，从顶部开始顺时针
+    for (let i = 0; i < totalCards; i++) {
+        const t = (i / totalCards) * Math.PI * 2;
         const x = 16 * Math.pow(Math.sin(t), 3);
         const y = -(13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
-        // 归一化到 0~1（x: -16~16, y: -17~15）
-        const nx = (x + 16) / 32;
-        const ny = (y + 17) / 32;
+        // 归一化到 -1 ~ 1
+        const nx = x / 17;
+        const ny = y / 18;
         points.push({ x: nx, y: ny });
     }
     return points;
@@ -205,6 +223,7 @@ const songName = document.getElementById('songName');
 const songArtist = document.getElementById('songArtist');
 const songCover = document.getElementById('songCover');
 const progressFill = document.getElementById('progressFill');
+const listenBtn = document.getElementById('listenBtn');
 
 // ========== 初始化 ==========
 document.addEventListener('DOMContentLoaded', () => {
@@ -212,43 +231,49 @@ document.addEventListener('DOMContentLoaded', () => {
     bindEvents();
 });
 
-// ========== 创建爱心标签 ==========
+// ========== 创建爱心标签（沿心形曲线堆叠） ==========
 function createHeartTags() {
-    const containerWidth = heartContainer.offsetWidth;
-    const containerHeight = heartContainer.offsetHeight;
-    const tagCount = songs.length;
+    const totalCards = songs.length;
+    const heartPoints = generateHeartPath(totalCards);
 
-    // 生成爱心轮廓点 + 内部填充点
-    const outlinePoints = generateHeartPoints(12);
-    const innerPoints = generateInnerPoints(6);
-
-    const allPoints = [...outlinePoints, ...innerPoints];
+    // 颜色循环
+    const colors = ['#ff6b9d', '#c44dff', '#6bbaff', '#6bff9d', '#ffa56b',
+                    '#ffe66b', '#ff5757', '#6bffe6', '#826bff', '#ff82aa',
+                    '#50c8b4', '#ffc850'];
 
     songs.forEach((song, index) => {
+        const point = heartPoints[index];
         const card = document.createElement('div');
-        card.className = `tag-card ${song.color}`;
+        card.className = 'tag-card';
+
+        // 颜色
+        const color = colors[index % colors.length];
+        card.style.setProperty('--card-color', color);
+        card.style.setProperty('--card-color-dark', shadeColor(color, -20));
+
+        // 位置：沿心形曲线，用百分比定位
+        const leftPct = 50 + point.x * 42; // 50% 为中心，±42% 范围
+        const topPct = 38 + point.y * 38;  // 38% 为中心，±38% 范围
+
+        card.style.left = `${leftPct}%`;
+        card.style.top = `${topPct}%`;
+
+        // 根据在心形上的位置计算旋转角度
+        const nextIndex = (index + 1) % totalCards;
+        const nextPoint = heartPoints[nextIndex];
+        const dx = nextPoint.x - point.x;
+        const dy = nextPoint.y - point.y;
+        const angle = Math.atan2(dy, dx) * (180 / Math.PI);
+        card.style.transform = `translate(-50%, -50%) rotate(${angle}deg)`;
+
+        // 入场延迟
         card.style.animationDelay = `${index * 0.08}s`;
 
-        // 随机旋转角度
-        const rotate = (Math.random() - 0.5) * 16;
-        card.style.setProperty('--rotate', `${rotate}deg`);
-        card.style.transform = `rotate(${rotate}deg)`;
-
-        // 获取爱心上的位置
-        const point = allPoints[index % allPoints.length];
-        const cardWidth = 130;
-        const cardHeight = 50;
-        const x = point.x * containerWidth - cardWidth / 2 + (Math.random() - 0.5) * 30;
-        const y = point.y * containerHeight - cardHeight / 2 + (Math.random() - 0.5) * 20;
-
-        card.style.left = `${Math.max(0, Math.min(x, containerWidth - cardWidth))}px`;
-        card.style.top = `${Math.max(0, Math.min(y, containerHeight - cardHeight))}px`;
-
-        // 歌词文本（取第一行）
-        const firstLine = song.lyric.split('\n')[0];
+        // 卡片内容：完整歌词
+        const lyricLines = song.lyric.split('\n');
         card.innerHTML = `
-            ${firstLine}
-            <span class="tag-song">— ${song.name}</span>
+            <div class="card-lyric">${lyricLines.join('<br>')}</div>
+            <div class="card-song">🎵 ${song.name} — ${song.artist}</div>
         `;
 
         card.addEventListener('click', () => openDetail(song));
@@ -256,37 +281,14 @@ function createHeartTags() {
     });
 }
 
-// 生成爱心内部填充点
-function generateInnerPoints(count) {
-    const points = [];
-    for (let i = 0; i < count; i++) {
-        // 在爱心内部随机生成点
-        let x, y;
-        let attempts = 0;
-        do {
-            x = Math.random();
-            y = Math.random();
-            attempts++;
-        } while (!isInsideHeart(x, y) && attempts < 100);
-
-        if (attempts < 100) {
-            points.push({ x, y });
-        }
-    }
-    return points;
-}
-
-// 检查点是否在爱心内部
-function isInsideHeart(nx, ny) {
-    // 将归一化坐标转回心形方程坐标
-    const x = (nx * 32) - 16;
-    const y = -((ny * 32) - 17);
-    // 心形隐式方程: (x² + y² - 1)³ - x²y³ < 0
-    const scale = 1 / 16;
-    const sx = x * scale;
-    const sy = y * scale;
-    const val = Math.pow(sx * sx + sy * sy - 1, 3) - sx * sx * sy * sy * sy;
-    return val < 0;
+// 颜色加深工具函数
+function shadeColor(color, percent) {
+    const num = parseInt(color.replace('#', ''), 16);
+    const amt = Math.round(2.55 * percent);
+    const R = Math.max(0, Math.min(255, (num >> 16) + amt));
+    const G = Math.max(0, Math.min(255, ((num >> 8) & 0x00FF) + amt));
+    const B = Math.max(0, Math.min(255, (num & 0x0000FF) + amt));
+    return `#${(0x1000000 + R * 0x10000 + G * 0x100 + B).toString(16).slice(1)}`;
 }
 
 // ========== 绑定事件 ==========
@@ -307,6 +309,9 @@ function openDetail(song) {
     songName.textContent = song.name;
     songArtist.textContent = song.artist;
     songCover.textContent = song.emoji;
+
+    // 设置去听歌链接
+    listenBtn.href = song.musicUrl || '#';
 
     // 生成歌词
     lyricsContainer.innerHTML = '';

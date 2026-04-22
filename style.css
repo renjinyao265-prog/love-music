@@ -32,7 +32,7 @@ body {
 
 .main-header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     z-index: 2;
 }
 
@@ -52,68 +52,85 @@ body {
     letter-spacing: 2px;
 }
 
-/* ========== 爱心容器 ========== */
+/* ========== 爱心容器 - 卡片沿心形曲线堆叠 ========== */
 .heart-container {
     position: relative;
-    width: 500px;
-    height: 480px;
+    width: 650px;
+    height: 620px;
+    max-width: 95vw;
+    max-height: 80vh;
     margin: 0 auto;
     flex-shrink: 0;
+    perspective: 1000px;
 }
 
-/* ========== 标签卡片 ========== */
+/* ========== 标签卡片 - 堆叠积木效果 ========== */
 .tag-card {
     position: absolute;
-    padding: 10px 16px;
-    border-radius: 12px;
+    width: 200px;
+    padding: 14px 16px;
+    border-radius: 10px;
     font-size: 13px;
-    line-height: 1.5;
+    line-height: 1.6;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(5px);
-    max-width: 160px;
-    text-align: center;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+    text-align: left;
     font-weight: 500;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    z-index: 1;
     user-select: none;
+    animation: cardDrop 0.6s ease-out backwards;
+
+    /* 3D 堆叠积木效果 */
+    background: rgba(255, 255, 255, 0.95);
+    color: #333;
+    transform-style: preserve-3d;
+    box-shadow:
+        4px 4px 0 0 var(--card-color, #ff6b9d),
+        8px 8px 0 0 var(--card-color-dark, #e5558a),
+        0 6px 20px rgba(0, 0, 0, 0.25);
+    border-left: 4px solid var(--card-color, #ff6b9d);
 }
 
 .tag-card:hover {
-    transform: scale(1.15) rotate(0deg) !important;
-    z-index: 10;
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+    z-index: 100 !important;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.15) translateY(-10px) !important;
+    box-shadow:
+        4px 4px 0 0 var(--card-color, #ff6b9d),
+        8px 8px 0 0 var(--card-color-dark, #e5558a),
+        0 20px 40px rgba(0, 0, 0, 0.4);
 }
 
 .tag-card:active {
-    transform: scale(1.05) !important;
+    transform: translate(-50%, -50%) rotate(0deg) scale(1.05) translateY(-4px) !important;
 }
 
-.tag-card .tag-song {
-    display: block;
-    font-size: 10px;
-    opacity: 0.7;
-    margin-top: 4px;
+.card-lyric {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #333;
+    margin-bottom: 6px;
 }
 
-/* 标签颜色主题 */
-.tag-pink { background: linear-gradient(135deg, rgba(255, 107, 157, 0.85), rgba(255, 154, 182, 0.85)); color: #fff; }
-.tag-purple { background: linear-gradient(135deg, rgba(196, 77, 255, 0.85), rgba(167, 119, 255, 0.85)); color: #fff; }
-.tag-blue { background: linear-gradient(135deg, rgba(107, 186, 255, 0.85), rgba(130, 204, 255, 0.85)); color: #fff; }
-.tag-green { background: linear-gradient(135deg, rgba(107, 255, 157, 0.85), rgba(130, 255, 180, 0.85)); color: #1a1a2e; }
-.tag-orange { background: linear-gradient(135deg, rgba(255, 165, 107, 0.85), rgba(255, 190, 130, 0.85)); color: #fff; }
-.tag-yellow { background: linear-gradient(135deg, rgba(255, 230, 107, 0.85), rgba(255, 240, 150, 0.85)); color: #1a1a2e; }
-.tag-red { background: linear-gradient(135deg, rgba(255, 87, 87, 0.85), rgba(255, 120, 120, 0.85)); color: #fff; }
-.tag-cyan { background: linear-gradient(135deg, rgba(107, 255, 230, 0.85), rgba(130, 255, 240, 0.85)); color: #1a1a2e; }
-.tag-indigo { background: linear-gradient(135deg, rgba(130, 107, 255, 0.85), rgba(160, 140, 255, 0.85)); color: #fff; }
-.tag-rose { background: linear-gradient(135deg, rgba(255, 130, 170, 0.85), rgba(255, 160, 190, 0.85)); color: #fff; }
-.tag-teal { background: linear-gradient(135deg, rgba(80, 200, 180, 0.85), rgba(110, 220, 200, 0.85)); color: #fff; }
-.tag-gold { background: linear-gradient(135deg, rgba(255, 200, 80, 0.85), rgba(255, 215, 120, 0.85)); color: #1a1a2e; }
+.card-song {
+    font-size: 11px;
+    color: #999;
+    border-top: 1px solid #eee;
+    padding-top: 6px;
+}
+
+/* 卡片入场动画 */
+@keyframes cardDrop {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(0deg) scale(0.5) translateY(-30px);
+    }
+    to {
+        opacity: 1;
+    }
+}
 
 /* ========== 主页底部 ========== */
 .main-footer {
-    margin-top: 20px;
+    margin-top: 25px;
     text-align: center;
     z-index: 2;
 }
@@ -188,25 +205,6 @@ body {
     }
 }
 
-/* 粒子形状变体 */
-.particle.heart-shape {
-    border-radius: 0;
-    width: 12px !important;
-    height: 12px !important;
-    background: transparent !important;
-    position: absolute;
-}
-
-.particle.heart-shape::before,
-.particle.heart-shape::after {
-    content: '';
-    position: absolute;
-    width: 12px;
-    height: 18px;
-    background: inherit;
-    border-radius: 12px 12px 0 0;
-}
-
 .particle.star-shape {
     border-radius: 0;
     clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
@@ -216,31 +214,24 @@ body {
 .detail-page.theme-romantic {
     background: linear-gradient(135deg, #2d1b3d 0%, #4a1942 30%, #801336 60%, #c72c41 100%);
 }
-
 .detail-page.theme-sad {
     background: linear-gradient(135deg, #0c1445 0%, #1a237e 30%, #283593 60%, #3949ab 100%);
 }
-
 .detail-page.theme-happy {
     background: linear-gradient(135deg, #ff6f00 0%, #ff8f00 30%, #ffa000 60%, #ffca28 100%);
 }
-
 .detail-page.theme-dreamy {
     background: linear-gradient(135deg, #1b0a3c 0%, #2d1b69 30%, #5c2d91 60%, #9b59b6 100%);
 }
-
 .detail-page.theme-fresh {
     background: linear-gradient(135deg, #0d4f4f 0%, #116466 30%, #1a8a8a 60%, #2bbbad 100%);
 }
-
 .detail-page.theme-warm {
     background: linear-gradient(135deg, #3e1f0d 0%, #5d2e0c 30%, #8b4513 60%, #cd853f 100%);
 }
-
 .detail-page.theme-night {
     background: linear-gradient(135deg, #0a0a2e 0%, #0d0d3b 30%, #141452 60%, #1a1a6e 100%);
 }
-
 .detail-page.theme-sweet {
     background: linear-gradient(135deg, #4a0e2e 0%, #6b1d4a 30%, #8e2d64 60%, #c74b8a 100%);
 }
@@ -284,14 +275,8 @@ body {
 }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .song-cover {
@@ -354,7 +339,6 @@ body {
     opacity: 0.5;
 }
 
-/* 逐字高亮 */
 .lyric-char {
     display: inline-block;
     transition: all 0.3s ease;
@@ -379,14 +363,22 @@ body {
     align-items: center;
     gap: 12px;
     width: 80%;
-    max-width: 400px;
+    max-width: 420px;
+}
+
+.controls-row {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
 .play-btn {
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 12px 30px;
+    padding: 12px 24px;
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.25);
@@ -396,6 +388,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     font-family: inherit;
+    white-space: nowrap;
 }
 
 .play-btn:hover {
@@ -405,6 +398,30 @@ body {
 
 .play-icon {
     font-size: 16px;
+}
+
+/* 去听歌按钮 */
+.listen-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #e91e63, #ff5722);
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-family: inherit;
+    white-space: nowrap;
+    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+}
+
+.listen-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.6);
 }
 
 .progress-bar {
@@ -424,16 +441,28 @@ body {
 }
 
 /* ========== 响应式 ========== */
-@media (max-width: 560px) {
+@media (max-width: 700px) {
     .heart-container {
-        width: 340px;
-        height: 340px;
+        width: 100%;
+        height: 70vh;
     }
 
     .tag-card {
-        padding: 6px 10px;
+        width: 140px;
+        padding: 10px 12px;
         font-size: 11px;
-        max-width: 110px;
+        box-shadow:
+            3px 3px 0 0 var(--card-color, #ff6b9d),
+            6px 6px 0 0 var(--card-color-dark, #e5558a),
+            0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-lyric {
+        font-size: 12px;
+    }
+
+    .card-song {
+        font-size: 10px;
     }
 
     .main-title {
@@ -447,18 +476,31 @@ body {
     .song-name {
         font-size: 20px;
     }
-}
 
-@media (max-width: 380px) {
-    .heart-container {
-        width: 280px;
-        height: 280px;
+    .controls-row {
+        flex-direction: column;
+        gap: 8px;
     }
 
+    .play-btn, .listen-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
     .tag-card {
-        padding: 5px 8px;
+        width: 110px;
+        padding: 8px 10px;
+        box-shadow:
+            2px 2px 0 0 var(--card-color, #ff6b9d),
+            4px 4px 0 0 var(--card-color-dark, #e5558a),
+            0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .card-lyric {
         font-size: 10px;
-        max-width: 90px;
+        line-height: 1.5;
     }
 }
 
@@ -484,18 +526,4 @@ body {
     66% { transform: translate(-2%, 1%); }
 }
 
-/* ========== 标签入场动画 ========== */
-.tag-card {
-    animation: tagAppear 0.6s ease-out backwards;
-}
 
-@keyframes tagAppear {
-    from {
-        opacity: 0;
-        transform: scale(0.3) rotate(10deg);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1) rotate(var(--rotate, 0deg));
-    }
-}
