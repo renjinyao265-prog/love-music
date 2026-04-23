@@ -400,28 +400,22 @@ body {
     font-size: 16px;
 }
 
-/* 去听歌按钮 */
-.listen-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 12px 24px;
-    background: linear-gradient(135deg, #e91e63, #ff5722);
-    border: none;
-    border-radius: 30px;
-    color: #fff;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-decoration: none;
-    font-family: inherit;
-    white-space: nowrap;
-    box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
+/* 音乐播放器 */
+.music-player {
+    width: 100%;
+    margin-top: 8px;
+    border-radius: 12px;
+    overflow: hidden;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
 }
 
-.listen-btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(233, 30, 99, 0.6);
+.music-player:hover {
+    opacity: 1;
+}
+
+.music-player iframe {
+    display: block;
 }
 
 .progress-bar {
@@ -482,7 +476,7 @@ body {
         gap: 8px;
     }
 
-    .play-btn, .listen-btn {
+    .play-btn {
         width: 100%;
         justify-content: center;
     }
