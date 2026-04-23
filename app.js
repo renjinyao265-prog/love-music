@@ -12,7 +12,7 @@ const songs = [
         theme: "romantic",
         emoji: "🌤️",
         color: "tag-yellow",
-        musicUrl: "https://music.163.com/#/search/m/?s=晴天 周杰伦"
+        musicUrl: "https://www.baidu.com/s?wd=晴天 周杰伦 歌曲"
     },
     {
         name: "起风了",
@@ -22,7 +22,7 @@ const songs = [
         theme: "dreamy",
         emoji: "🍃",
         color: "tag-green",
-        musicUrl: "https://music.163.com/#/search/m/?s=起风了 买辣椒也用券"
+        musicUrl: "https://www.baidu.com/s?wd=起风了 买辣椒也用券 歌曲"
     },
     {
         name: "孤勇者",
@@ -32,7 +32,7 @@ const songs = [
         theme: "night",
         emoji: "⚔️",
         color: "tag-indigo",
-        musicUrl: "https://music.163.com/#/search/m/?s=孤勇者 陈奕迅"
+        musicUrl: "https://www.baidu.com/s?wd=孤勇者 陈奕迅 歌曲"
     },
     {
         name: "稻香",
@@ -42,7 +42,7 @@ const songs = [
         theme: "warm",
         emoji: "🌾",
         color: "tag-orange",
-        musicUrl: "https://music.163.com/#/search/m/?s=稻香 周杰伦"
+        musicUrl: "https://www.baidu.com/s?wd=稻香 周杰伦 歌曲"
     },
     {
         name: "漠河舞厅",
@@ -52,7 +52,7 @@ const songs = [
         theme: "sad",
         emoji: "❄️",
         color: "tag-blue",
-        musicUrl: "https://music.163.com/#/search/m/?s=漠河舞厅 柳爽"
+        musicUrl: "https://www.baidu.com/s?wd=漠河舞厅 柳爽 歌曲"
     },
     {
         name: "错位时空",
@@ -62,7 +62,7 @@ const songs = [
         theme: "romantic",
         emoji: "🌙",
         color: "tag-purple",
-        musicUrl: "https://music.163.com/#/search/m/?s=错位时空 艾辰"
+        musicUrl: "https://www.baidu.com/s?wd=错位时空 艾辰 歌曲"
     },
     {
         name: "踏山河",
@@ -72,7 +72,7 @@ const songs = [
         theme: "night",
         emoji: "🏔️",
         color: "tag-red",
-        musicUrl: "https://music.163.com/#/search/m/?s=踏山河 是七叔呢"
+        musicUrl: "https://www.baidu.com/s?wd=踏山河 是七叔呢 歌曲"
     },
     {
         name: "可能",
@@ -82,7 +82,7 @@ const songs = [
         theme: "dreamy",
         emoji: "✨",
         color: "tag-cyan",
-        musicUrl: "https://music.163.com/#/search/m/?s=可能 程响"
+        musicUrl: "https://www.baidu.com/s?wd=可能 程响 歌曲"
     },
     {
         name: "晚风心里吹",
@@ -92,7 +92,7 @@ const songs = [
         theme: "fresh",
         emoji: "🌅",
         color: "tag-teal",
-        musicUrl: "https://music.163.com/#/search/m/?s=晚风心里吹 陈婧霏"
+        musicUrl: "https://www.baidu.com/s?wd=晚风心里吹 陈婧霏 歌曲"
     },
     {
         name: "半生雪",
@@ -102,7 +102,7 @@ const songs = [
         theme: "sad",
         emoji: "🌸",
         color: "tag-pink",
-        musicUrl: "https://music.163.com/#/search/m/?s=半生雪 是七叔呢"
+        musicUrl: "https://www.baidu.com/s?wd=半生雪 是七叔呢 歌曲"
     },
     {
         name: "下山",
@@ -112,7 +112,7 @@ const songs = [
         theme: "happy",
         emoji: "⛰️",
         color: "tag-gold",
-        musicUrl: "https://music.163.com/#/search/m/?s=下山 要不要买菜"
+        musicUrl: "https://www.baidu.com/s?wd=下山 要不要买菜 歌曲"
     },
     {
         name: "星辰大海",
@@ -122,7 +122,7 @@ const songs = [
         theme: "night",
         emoji: "🌊",
         color: "tag-blue",
-        musicUrl: "https://music.163.com/#/search/m/?s=星辰大海 黄霄雲"
+        musicUrl: "https://www.baidu.com/s?wd=星辰大海 黄霄雲 歌曲"
     },
     {
         name: "告白气球",
@@ -132,7 +132,7 @@ const songs = [
         theme: "sweet",
         emoji: "🎈",
         color: "tag-rose",
-        musicUrl: "https://music.163.com/#/search/m/?s=告白气球 周杰伦"
+        musicUrl: "https://www.baidu.com/s?wd=告白气球 周杰伦 歌曲"
     },
     {
         name: "光年之外",
@@ -142,7 +142,7 @@ const songs = [
         theme: "dreamy",
         emoji: "🌌",
         color: "tag-indigo",
-        musicUrl: "https://music.163.com/#/search/m/?s=光年之外 邓紫棋"
+        musicUrl: "https://www.baidu.com/s?wd=光年之外 邓紫棋 歌曲"
     },
     {
         name: "少年",
@@ -152,7 +152,7 @@ const songs = [
         theme: "happy",
         emoji: "🧑",
         color: "tag-orange",
-        musicUrl: "https://music.163.com/#/search/m/?s=少年 梦然"
+        musicUrl: "https://www.baidu.com/s?wd=少年 梦然 歌曲"
     },
     {
         name: "飞鸟和蝉",
@@ -162,7 +162,7 @@ const songs = [
         theme: "sad",
         emoji: "🐦",
         color: "tag-teal",
-        musicUrl: "https://music.163.com/#/search/m/?s=飞鸟和蝉 任然"
+        musicUrl: "https://www.baidu.com/s?wd=飞鸟和蝉 任然 歌曲"
     },
     {
         name: "白月光与朱砂痣",
@@ -172,7 +172,7 @@ const songs = [
         theme: "romantic",
         emoji: "💎",
         color: "tag-rose",
-        musicUrl: "https://music.163.com/#/search/m/?s=白月光与朱砂痣 大籽"
+        musicUrl: "https://www.baidu.com/s?wd=白月光与朱砂痣 大籽 歌曲"
     },
     {
         name: "可可托海的牧羊人",
@@ -182,7 +182,7 @@ const songs = [
         theme: "warm",
         emoji: "🐑",
         color: "tag-gold",
-        musicUrl: "https://music.163.com/#/search/m/?s=可可托海的牧羊人 王琪"
+        musicUrl: "https://www.baidu.com/s?wd=可可托海的牧羊人 王琪 歌曲"
     }
 ];
 
