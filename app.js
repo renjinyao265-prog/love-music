@@ -312,7 +312,7 @@ function openDetail(song) {
 
     // 嵌入网易云音乐播放器
     if (song.songId) {
-        musicPlayer.innerHTML = `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=66 src="//music.163.com/outchain/player?type=2&id=${song.songId}&auto=1&height=66"></iframe>`;
+        musicPlayer.innerHTML = `<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=100% height=66 src="https://music.163.com/outchain/player?type=2&id=${song.songId}&auto=0&height=66"></iframe>`;
     } else {
         musicPlayer.innerHTML = '';
     }
